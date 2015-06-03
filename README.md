@@ -27,5 +27,9 @@ We can see that for 1e8 points (the largest N), the GPU really dominates (2724.3
 
 ![](https://github.com/sszuflita/optimize/blob/master/analysis/-(x-500)%5E2_stripped.png?raw=true "Optional title")
 
+As a sanity check, we want to make sure the output maximums are actually good estimations of the maximum. I threw out the N=10 and N=100 cases, but for the rest we can see that both the CPU and GPU converge on the maximum fairly accurately.
+
+![](https://github.com/sszuflita/optimize/blob/master/analysis/accuracy.png?raw=true "Optional title")
+
 
 ## references
