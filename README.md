@@ -31,5 +31,12 @@ As a sanity check, we want to make sure the output maximums are actually good es
 
 ![](https://github.com/sszuflita/optimize/blob/master/analysis/accuracy.png?raw=true "Optional title")
 
+One further question we may have is how the GPU performs with more complex functions. As mentioned in class, GPUs have special hardware to compute transcendental functions. To test the performance of this, I reran the benchmarks with
+
+f(x) = 20 * log(x) - .0004 * x * x * sin(x) + x * cos(x)
+
+![](https://github.com/sszuflita/optimize/blob/master/analysis/complex.png?raw=true "Optional title")
+
+We can see that the GPU still beats the CPU handily for larger function values.
 
 ## references
