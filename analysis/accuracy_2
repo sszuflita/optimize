@@ -1,0 +1,111 @@
+N: 10
+Starting CPU stuff
+CPU max value:	616.203186
+for input value:	483.612610
+
+CPU time:	0.083520
+
+Generating GPU inputs
+Generating GPU outputs
+GPU max value:	606.768311
+for input value:	740.219360
+
+GPU time:	20.033855
+
+N: 100
+Starting CPU stuff
+CPU max value:	1202.823608
+for input value:	998.788574
+
+CPU time:	0.106720
+
+Generating GPU inputs
+Generating GPU outputs
+GPU max value:	788.215332
+for input value:	721.777771
+
+GPU time:	8.708256
+
+N: 1000
+Starting CPU stuff
+CPU max value:	1202.823608
+for input value:	998.788574
+
+CPU time:	0.127488
+
+Generating GPU inputs
+Generating GPU outputs
+GPU max value:	1197.830688
+for input value:	986.096558
+
+GPU time:	8.844352
+
+N: 10000
+Starting CPU stuff
+CPU max value:	1213.329834
+for input value:	998.665527
+
+CPU time:	1.032000
+
+Generating GPU inputs
+Generating GPU outputs
+GPU max value:	1178.308350
+for input value:	973.611511
+
+GPU time:	8.820800
+
+N: 100000
+Starting CPU stuff
+CPU max value:	1213.501343
+for input value:	998.649414
+
+CPU time:	10.112288
+
+Generating GPU inputs
+Generating GPU outputs
+GPU max value:	1210.703735
+for input value:	998.719727
+
+GPU time:	8.977760
+
+N: 1000000
+Starting CPU stuff
+CPU max value:	1213.503052
+for input value:	998.647278
+
+CPU time:	100.999298
+
+Generating GPU inputs
+Generating GPU outputs
+GPU max value:	1213.480225
+for input value:	998.641052
+
+GPU time:	10.775264
+
+N: 10000000
+Starting CPU stuff
+CPU max value:	1213.503174
+for input value:	998.647705
+
+CPU time:	1009.412720
+
+Generating GPU inputs
+Generating GPU outputs
+GPU max value:	1213.501831
+for input value:	998.649170
+
+GPU time:	25.862207
+
+N: 100000000
+Starting CPU stuff
+CPU max value:	1213.503174
+for input value:	998.647583
+
+CPU time:	10091.837891
+
+Generating GPU inputs
+Generating GPU outputs
+GPU max value:	1213.503174
+for input value:	998.647461
+
+GPU time:	174.614532

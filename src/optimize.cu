@@ -14,7 +14,7 @@ using namespace std;
 
 
 __device__ __host__ float f(float x) {
-  return -1 * (x - 500) * (x - 500);
+  return 20 * log(x) - .0004 * x * x * sin(x) + x * cos(x);
 }
 
 __device__ float rand_float(float low, float high, float r) {
