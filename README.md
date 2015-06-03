@@ -19,4 +19,13 @@ Admittedly, the interface is also a bit awkward; ideally the user's objective fu
 
 ## results
 
+I began by benchmarking the GPU optimizer against a simple CPU optimizer using an analagous serial algorithm. I used the objective function -(x - 500)^2.
+
+![](https://github.com/sszuflita/optimize/blob/master/analysis/-(x-500)%5E2_full.png?raw=true "Optional title")
+
+We can see that for 1e8 points (the largest N), the GPU really dominates (2724.387939 ms vs 98.551132 ms). Stripping out these points, we can see that the two implementations are similar for smaller points.
+
+![](https://github.com/sszuflita/optimize/blob/master/analysis/-(x-500)%5E2_stripped.png?raw=true "Optional title")
+
+
 ## references
