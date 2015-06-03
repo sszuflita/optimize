@@ -13,9 +13,10 @@
 
 using namespace std;
 
-// (From Eric's code)
-    cudaEvent_t start;
-    cudaEvent_t stop;
+
+/* Timer boilerplate code */
+cudaEvent_t start;
+cudaEvent_t stop;
 
 #define START_TIMER() {                         \
       gpuErrChk(cudaEventCreate(&start));       \
@@ -34,6 +35,7 @@ using namespace std;
 ////////////////////////////////////////////////////////////////////////////////
 // Start non boilerplate code
 
+/* Generate uniform random float between low and high */
 float rand_float(float low, float high) {
   return low + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(high - low)));
 }
@@ -41,13 +43,13 @@ float rand_float(float low, float high) {
 int main(int argc, char** argv) {
 
   /* N function evaluations */
-
   int N = 1e8;
 
+  /* Constraints */
   float low = 0.;
   float high = 1000.;
 
-  /* CPU STUFF */
+  /* CPU code for benchmarking */
 
   float cpu_time = -1.;
 
@@ -57,9 +59,11 @@ int main(int argc, char** argv) {
 
   srand(time(NULL));
 
+  /* Initial function evaluation */  
   float maximizer = rand_float(low, high);
   float maximum = f(maximizer);
 
+  /* N-1 more evaluations */
   for (int i = 0; i < N - 1; i++) {
     float input = rand_float(low, high);
     float output = f(input);
@@ -83,10 +87,15 @@ int main(int argc, char** argv) {
   START_TIMER();
 {
 
-  // N, low, high, optimization type
-  OptimizationOutput gpu_result = optimize(N, low, high, UNIFORM_RANDOM);
+  /* Call optimize */
+  OptimizationOutput gpu_result = optimize(
+    N, /* number of evaluations */
+    low, /* lower bound */
+    high, /* upper bound */
+    UNIFORM_RANDOM /* optimization algorithm */
+  );
 
-  printf("CPU max value:\t%f\n", gpu_result.maximum);
+  printf("GPU max value:\t%f\n", gpu_result.maximum);
   printf("for input value:\t%f\n", gpu_result.maximizer);
 }
 

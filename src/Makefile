@@ -34,9 +34,12 @@ else
       NVCCFLAGS := -m64
 endif
 
-TARGETS = toy_example
+TARGETS = toy_example benchmark
 
 all: $(TARGETS)
+
+benchmark: benchmark.cc optimize.o
+	$(CC) $< -std=c++0x -o $@ optimize.o -O3 $(LDFLAGS) -Wall -I$(CUDA_INC_PATH)
 
 toy_example: toy_example.cc optimize.o
 	$(CC) $< -std=c++0x -o $@ optimize.o -O3 $(LDFLAGS) -Wall -I$(CUDA_INC_PATH)
