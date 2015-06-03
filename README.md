@@ -37,6 +37,7 @@ f(x) = 20 * log(x) - .0004 * x * x * sin(x) + x * cos(x)
 
 ![](https://github.com/sszuflita/optimize/blob/master/analysis/complex.png?raw=true "Optional title")
 
-We can see that the GPU still beats the CPU handily for larger function values.
+We can see that the GPU still beats the CPU handily for larger numbers of input values.
 
 ## references
+I looked at some of the slides, that's about it.
