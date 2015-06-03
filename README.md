@@ -9,7 +9,7 @@ This type of problem is very well suited for a GPU, in which many function evalu
 
 ## approach
 
-This library presents a dead-simple interface. The user defines a __device__ function, which is run by the GPU a fixed number of times (the number of function evaluations is a key metric in black box optimization).
+This library presents a dead-simple interface. The user defines a \_\_device\_\_ function, which is run by the GPU a fixed number of times (the number of function evaluations is a key metric in black box optimization).
 
 The goal of this project was to produce a simple example which could be tested and benchmarked, so the current input space is a line segment. This could fairly easily be expanded to multiple dimensions, although a more generic input space would be difficult to efficiently describe.
 
